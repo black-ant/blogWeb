@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- D:\前端\收集的网站模板\主页_多种head和样式\template-menu-left.html-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from edena-creative-multipurpose-bootstrap-theme.little-neko.com/files/template-menu-left.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2015 04:29:50 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+<head>
+
+    <!-- Basic Page Needs ================================================== -->
+    <meta charset="utf-8">
+    <title>EDENA HTML website template by Little Neko</title>
+    <meta name="description" content="neko-description">
+    <meta name="author" content="Little NEKO">
+    <!-- Mobile Specific Metas ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS ================================================== -->
+    <!-- web font  -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Neko framework  -->
+    <link type="text/css" rel="stylesheet" href="css/docs/custom-icons.css">
+    <link type="text/css" rel="stylesheet" href="css/docs/neko-framework/external-plugins/external-plugins.min.css">
+    <link type="text/css" rel="stylesheet" href="css/docs/neko-framework/css/layout/neko-framework-layout.css">
+    <link type="text/css" rel="stylesheet" id="color" href="css/docs/neko-framework/css/color/neko-framework-color.css">
+
+</head>
+<body class="activate-appear-animation header-7">
+
+<div class="headerPage"></div>
+<!-- global-wrapper -->
+<div id="global-wrapper">
+    <!-- content -->
+    <main id="content">
+        <header class="page-header">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Page
+                            <small>with a left sidebar</small>
+                        </h1>
+                    </div>
+                    <div class="col-md-6">
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- page -->
+        <section class="pt pb-medium">
+            <div class="container">
+                <div class="row">
+                    <!-- sub menu -->
+                    <aside id="sidebar" class="col-md-3">
+                        <nav class="sidebar-menu mb-xs">
+                            <ul>
+                                <li><a class="active" href="#">AntSSO</a></li>
+                                <li><a href="#">AntEngine</a></li>
+                                <li><a href="#">AntCommon</a></li>
+                                <li><a href="#">AntCase</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <!-- / sub menu -->
+                    <!-- content -->
+                    <section class="col-md-9">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>一个基于SpringSecurity 的安全框架 ,扩展多种登录方式</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="static/images/logo-footer.png" alt="" class="responsive"/></a>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p>基于 Spring Boot ,Spring Security</p>
+                                <p>1 账号密码登录</p>
+                                <p>2 验证码登录</p>
+                                <p>3 互联网认证 : 钉钉 ,微信 ... </p>
+                                <p>4 人脸识别 </p>
+                            </div>
+                            <div class="col-md-12">
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+                    <!-- / content -->
+
+
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section>
+        <!-- page -->
+    </main>
+    <!-- / content -->
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src='vue/vue.min.js'></script>
+<script src="js/ant/ant-utils.js"></script>
+<script src="js/initCommon.js"></script>
+
+<script type="module">
+
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        computed: {},
+        methods: {},
+        watch: {},
+        mounted() {
+            antInit.init("header_project");
+            console.log(antUtils);
+        },
+        directives: {},
+        components: {},
+        filters: {}
+    });
+
+</script>
+</body>
+
+<!-- Mirrored from edena-creative-multipurpose-bootstrap-theme.little-neko.com/files/template-menu-left.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2015 04:29:51 GMT -->
+</html>
