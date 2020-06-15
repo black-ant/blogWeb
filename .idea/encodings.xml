@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/blog-about.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/blog-doclist.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/blog-docview.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/blog-home.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/blog-index.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/blog-project.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/about/skel.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/about/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/home/skel-noscript.css" charset="UTF-8" />
@@ -15,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/css/home/style-narrower.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/home/style-wide.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/home/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/view/tailwind.min.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/home/init.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/restApi.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/skel-panels.min.js" charset="UTF-8" />

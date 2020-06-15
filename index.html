@@ -21,6 +21,7 @@
 
 
     <style>
+
         .index-header {
             text-align: center;
             color: #fff;
@@ -58,6 +59,58 @@
             font-weight: 700;
         }
 
+        .star-light {
+            border-color: #fff;
+            margin: 25px auto 30px;
+            padding: 0;
+            max-width: 250px;
+            border: 0;
+            border-top: solid 5px;
+            text-align: center;
+        }
+
+        #portfolio {
+            padding: 100px 0 20px 0;
+        }
+
+        .text-center h2 {
+            text-transform: uppercase;
+            font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .text-center .star-primary {
+            border-color: #2c3e50;
+            margin: 25px auto 30px;
+            padding: 0;
+            max-width: 250px;
+            border: 0;
+            border-top: solid 5px;
+            text-align: center;
+        }
+
+        @media (min-width: 767px) {
+            #portfolio .portfolio-item {
+                margin: 0 0 30px;
+            }
+        }
+
+        body {
+            padding-top: 0px;
+        }
+
+        .index-header .container .img-responsive {
+            display: block;
+            max-width: 100%;
+            width: 12em;
+            height: auto;
+            margin: 0 auto 20px;
+            vertical-align: middle;
+        }
+
+
     </style>
 </head>
 
@@ -69,7 +122,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" :src="pic+'self.png'" alt="">
+                <img class="img-responsive" src="./static/images/self.png" alt="">
                 <div class="intro-text">
                     <span class="name">小蚂蚁 - Gang</span>
                     <hr class="star-light">
