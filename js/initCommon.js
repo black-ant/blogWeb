@@ -12,7 +12,8 @@ var antInit = {
 
     },
     initJs: function () {
-        antInit.buildScript("./js/ant//ant-utils.js");
+        antInit.buildScript("./js/axios.min.js");
+        antInit.buildScript("./js/ant/ant-utils.js");
         antInit.buildScript("./js/restApi.js");
     },
     buildScript: function (url, time) {

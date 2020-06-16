@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="696e91ba-c01b-4cbd-87a4-d6733966f3f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/view/google.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/view/tailwind.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/self.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-docs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/headerCommon.html" beforeDir="false" afterPath="$PROJECT_DIR$/component/headerCommon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/css/layout/neko-framework-layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/css/layout/neko-framework-layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home/style-desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/style-desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home/style-narrow.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/style-narrow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home/images/fotogrph-dark-stairwell.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/images/fotogrph-dark-stairwell.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home/images/n33-robot-invader.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/images/n33-robot-invader.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home/images/pichome01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/images/pichome01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home/images/pichome02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/css/home/images/pichome02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/initCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/initCommon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/restApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/restApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/about/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/about/bg.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="361">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
@@ -43,53 +38,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-docs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
+            <state relative-caret-position="988">
               <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog-home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="74" column="63" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
+            <state relative-caret-position="729">
+              <caret line="270" column="52" selection-start-line="270" selection-start-column="52" selection-end-line="270" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/headerCommon.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/docs/neko-framework/css/layout/neko-framework-layout.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="7115" column="15" selection-start-line="7115" selection-start-column="15" selection-end-line="7115" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/home/style-desktop.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+            <state relative-caret-position="2660">
+              <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -97,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/home/style-narrow.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="869">
+            <state relative-caret-position="1691">
               <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
             </state>
           </provider>
@@ -106,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="665">
               <caret line="35" selection-start-line="35" selection-end-line="54" selection-end-column="17" />
             </state>
           </provider>
@@ -115,6 +83,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/home/style-mobile.css">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ant/ant-utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/restApi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/initCommon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="16" selection-start-line="5" selection-start-column="5" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -170,9 +165,7 @@
         <option value="$PROJECT_DIR$/css/about/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/component/commonHeader.html" />
         <option value="$PROJECT_DIR$/js/ant/ant-utils.js" />
-        <option value="$PROJECT_DIR$/js/restApi.js" />
         <option value="$PROJECT_DIR$/css/common-style.css" />
-        <option value="$PROJECT_DIR$/js/initCommon.js" />
         <option value="$PROJECT_DIR$/blog-project.html" />
         <option value="$PROJECT_DIR$/blog-view.html" />
         <option value="$PROJECT_DIR$/css/docs/neko-framework/css/layout/neko-framework-layout.css" />
@@ -180,9 +173,11 @@
         <option value="$PROJECT_DIR$/component/headerCommon.html" />
         <option value="$PROJECT_DIR$/css/home/style-desktop.css" />
         <option value="$PROJECT_DIR$/css/home/style-narrow.css" />
-        <option value="$PROJECT_DIR$/blog-home.html" />
         <option value="$PROJECT_DIR$/blog-docs.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/initCommon.js" />
+        <option value="$PROJECT_DIR$/js/restApi.js" />
+        <option value="$PROJECT_DIR$/blog-home.html" />
       </list>
     </option>
   </component>
@@ -195,7 +190,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1913" />
+    <option name="x" value="3633" />
     <option name="width" value="1734" />
     <option name="height" value="1407" />
   </component>
@@ -204,8 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +237,17 @@
             <path>
               <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,6 +260,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,7 +269,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ant-blog-server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin.scripting" />
@@ -308,16 +314,18 @@
       <updated>1592137599356</updated>
       <workItem from="1592137600702" duration="11047000" />
       <workItem from="1592183759064" duration="229000" />
-      <workItem from="1592225753241" duration="6791000" />
+      <workItem from="1592225753241" duration="7479000" />
+      <workItem from="1592270048952" duration="315000" />
+      <workItem from="1592281244401" duration="2467000" />
+      <workItem from="1592310579617" duration="1157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18067000" />
+    <option name="totallyTimeSpent" value="22694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="0" width="1734" height="1407" extended-state="0" />
-    <editor active="true" />
+    <frame x="3633" y="0" width="1734" height="1407" extended-state="0" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="JRebel" order="1" side_tool="true" />
@@ -326,10 +334,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25985664" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.24074075" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.024019215" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49880525" visible="true" weight="0.024019215" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
@@ -339,7 +347,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" sideWeight="0.49940264" weight="0.46677342" />
-      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.50059736" side_tool="true" weight="0.3298639" />
+      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.5011947" side_tool="true" visible="true" weight="0.024019215" />
       <window_info anchor="bottom" id="Message" order="12" />
       <window_info anchor="bottom" id="Find" order="13" />
       <window_info anchor="bottom" id="Run" order="14" />
@@ -417,13 +425,6 @@
     <entry file="file://$PROJECT_DIR$/js/about/skel.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ant/ant-utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ant/ant-math.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -436,16 +437,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/axios.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/restApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" lean-forward="true" selection-end-line="43" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -460,13 +451,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ant/ant-common.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/initCommon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -498,69 +482,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/component/headerCommon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/docs/neko-framework/css/layout/neko-framework-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="135185">
           <caret line="7115" column="15" selection-start-line="7115" selection-start-column="15" selection-end-line="7115" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/component/headerCommon.html">
+    <entry file="file://$PROJECT_DIR$/css/home/style-desktop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        <state relative-caret-position="2869">
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog-about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="361">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/home/style-mobile.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/home/style-desktop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/home/style-narrow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="869">
-          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="35" selection-start-line="35" selection-end-line="54" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog-home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="74" column="63" selection-start-line="74" selection-start-column="63" selection-end-line="74" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog-docs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
+        <state relative-caret-position="988">
           <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+        <state relative-caret-position="2660">
+          <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/home/style-narrow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1691">
+          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" selection-start-line="35" selection-end-line="54" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/home/style-mobile.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ant/ant-utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/restApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/initCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="16" selection-start-line="5" selection-start-column="5" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="270" column="52" selection-start-line="270" selection-start-column="52" selection-end-line="270" selection-end-column="52" />
         </state>
       </provider>
     </entry>

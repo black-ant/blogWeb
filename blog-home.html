@@ -232,24 +232,23 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src='vue/vue.min.js'></script>
-'
+<script src="js/ant/ant-utils.js"></script>
+<script src="js/initCommon.js"></script>
 
 <script src="js/skel.min.js"></script>
 <script src="js/skel-panels.min.js"></script>
 <script src="js/home/init.js"></script>
 
-<script src="js/ant/ant-utils.js"></script>
-<script src="js/initCommon.js"></script>
 
 <script type="module">
 
+    antInit.init("header_home");
     var default_doc = [{
         id: "0",
         contentTitle: "文章还在处理中",
         contentInfo: "今夕何夕兮，搴舟中流。",
         createDate: "2020-05-17 17:55:26"
     }];
-
     var app = new Vue({
         el: "#app",
         data: {
@@ -261,21 +260,19 @@
             }
         },
         computed: {},
-        methods: {
-            refushDocList(backData) {
-
-                // 数据渲染
-                this.docList = backData.records;
-
-                // 处理分页
-                this.pages.total
-
-            }
-        },
+        methods: {},
         watch: {},
         mounted() {
-            antInit.init("header_home");
             console.log(antUtils);
+
+            setTimeout(function () {
+                restApi.getDocList(0, function (backData) {
+                    // 数据渲染
+                    this.docList = backData.records;
+                    // 处理分页
+                    this.pages.total
+                });
+            }, 300);
         },
         directives: {},
         components: {},
