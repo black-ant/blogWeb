@@ -211,7 +211,7 @@
         methods: {
             forward: function (type) {
                 var search = antUtils.cacheGet('view');
-                if (type != search.type) {
+                if (search == null || type != search.type) {
                     search.key = 0;
                 }
                 search.type = type;
