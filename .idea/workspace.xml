@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="696e91ba-c01b-4cbd-87a4-d6733966f3f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/menu/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/menu/anime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/menu/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/external-plugins/external-plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/external-plugins/external-plugins.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/js/jquery/jquery-1.10.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/js/jquery/jquery-1.10.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/js/neko-framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/js/neko-framework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-all.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-viewer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog-view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="278" column="36" selection-start-line="278" selection-start-column="36" selection-end-line="278" selection-end-column="36" />
+            <state relative-caret-position="441">
+              <caret line="255" column="75" selection-start-line="255" selection-start-column="75" selection-end-line="255" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -308,12 +296,12 @@
       <workItem from="1592357452715" duration="628000" />
       <workItem from="1592623068965" duration="1516000" />
       <workItem from="1592659334228" duration="4572000" />
-      <workItem from="1592708919697" duration="23663000" />
+      <workItem from="1592708919697" duration="23846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53692000" />
+    <option name="totallyTimeSpent" value="53875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3633" y="0" width="1734" height="1407" extended-state="0" />
@@ -329,7 +317,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.2759022" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49650756" weight="0.36978757" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49650756" visible="true" weight="0.36978757" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
@@ -339,7 +327,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" sideWeight="0.49940264" weight="0.46677342" />
-      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.5005821" side_tool="true" visible="true" weight="0.3296617" />
+      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.5005821" side_tool="true" weight="0.3296617" />
       <window_info anchor="bottom" id="Message" order="12" />
       <window_info anchor="bottom" id="Find" order="13" sideWeight="0.49941793" weight="0.3296617" />
       <window_info anchor="bottom" id="Run" order="14" />
@@ -641,8 +629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog-view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="278" column="36" selection-start-line="278" selection-start-column="36" selection-end-line="278" selection-end-column="36" />
+        <state relative-caret-position="441">
+          <caret line="255" column="75" selection-start-line="255" selection-start-column="75" selection-end-line="255" selection-end-column="75" />
         </state>
       </provider>
     </entry>

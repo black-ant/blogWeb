@@ -253,6 +253,7 @@
             forward: function (key) {
                 search.key = key;
                 antUtils.cacheSet('view', search);
+                $(".doc-menu-container").html("<div id=\"myMenu\"></div>");
                 app.viewGet();
             },
             viewGet: function () {
