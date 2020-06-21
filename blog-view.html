@@ -8,6 +8,10 @@
     <!--    <link type="text/css" rel="stylesheet" href="css/view/google.css">-->
     <link rel="stylesheet" href="css/markdown/toastui-editor-viewer.min.css"/>
     <link rel="stylesheet" href="css/markdown/github.min.css"/>
+    <link rel="stylesheet" href="css/menu/normalize.css"/>
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-list.svg'>
     <style>
         .quicksand {
             font-family: 'Nunito', sans-serif;
@@ -89,11 +93,94 @@
             cursor: pointer;
         }
 
+        body {
+            background-color: #494a5f;
+            color: #fff;
+            font-family: open sans, sans-serif;
+            font-size: 12px
+        }
+
+        h2 {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            z-index: -1
+        }
+
+        .center {
+            position: fixed;
+            margin: auto;
+            right: 10em;
+            bottom: 10em;
+        }
+
+        .menu {
+            width: 40px;
+            height: 40px
+        }
+
+        .title {
+            width: 300px;
+            height: 10px;
+            top: 60px
+        }
+
+        .item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+            line-height: 40px
+        }
+
+        i {
+            font-size: 24px;
+            color: #222
+        }
+
+        .menu_hidden .docmenu_item {
+            display: none;
+        }
+
+
+        .docmenu_item {
+            position: absolute;
+            padding-left: 9px;
+            left: -14em;
+            top: 0;
+            width: 13em;
+            height: 40px;
+            border-radius: 20px 10px 10px 20px;
+            background-color: inherit;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #000;
+            cursor: pointer;
+            font-weight: 900;
+            text-align: center;
+            line-height: 40px;
+            font-family: open sans, sans-serif;
+            font-size: 12px;
+        }
+
 
     </style>
 
 </head>
 <body>
+
+<div class="center doc-menu-container zge menu_hidden">
+    <div id="myMenu"></div>
+</div>
+
 <div class="mybody bg-white text-gray-700 font-sans quicksand">
     <div class="view-top">
         <div class="view-back" onclick="javascript:window.location.href='blog-docs.html'">返回</div>
@@ -129,6 +216,7 @@
 </div>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui-1.11.0.js"></script>
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
 <script src="js/axios.min.js"></script>
@@ -136,6 +224,9 @@
 
 <script src="js/markdown/toastui-editor-viewer.js"></script>
 <script src="js/markdown/toastui-editor-plugin-code.js"></script>
+
+<script src="js/menu/anime.js"></script>
+<script src="js/menu/menu.js"></script>
 
 <script src='vue/vue.min.js'></script>
 <script type="module">
@@ -170,14 +261,30 @@
                     var content = antUtils.mkExchangeArray(data.contentBody).join('\n');
 
                     $self.menuList = menu;
-                    const viewer = new toastui.Editor({
-                        el: document.querySelector('#viewer'),
-                        initialValue: content,
-                        plugins: [codeSyntaxHighlight]
+
+                    try {
+                        const viewer = new toastui.Editor({
+                            el: document.querySelector('#viewer'),
+                            initialValue: content,
+                            plugins: [codeSyntaxHighlight]
+                        });
+                    } catch (e) {
+
+                    }
+
+                    var menuItem = [];
+                    var menu = new Menu("#myMenu");
+                    var item1 = new Item("list");
+                    menu.add(item1);
+                    $("#viewer h2,h3").each(function (item) {
+                        var item2 = new Item("link", $(this).html(), colorArray[Math.ceil(Math.random() * 10)]);
+                        menu.add(item2);
                     });
 
-                    // 刷新菜单
-
+                    $(document).delay(50).queue(function (next) {
+                        menu.open();
+                        next();
+                    });
                 })
             }
         },

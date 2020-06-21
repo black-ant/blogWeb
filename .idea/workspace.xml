@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="696e91ba-c01b-4cbd-87a4-d6733966f3f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blog-docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-docs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/menu/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-ui-1.11.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/menu/anime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/menu/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/initCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/initCommon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/external-plugins/external-plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/external-plugins/external-plugins.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/js/jquery/jquery-1.10.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/js/jquery/jquery-1.10.2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/docs/neko-framework/js/neko-framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/css/docs/neko-framework/js/neko-framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/markdown/toastui-editor-viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/markdown/toastui-editor-viewer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog-view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
+            <state relative-caret-position="322">
+              <caret line="278" column="36" selection-start-line="278" selection-start-column="36" selection-end-line="278" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -29,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/restApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="516">
               <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
             </state>
           </provider>
@@ -45,49 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/markdown/toastui-editor.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/initCommon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="186">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/markdown/toastui-editor-viewer.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="130" column="16" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="755320" selection-start-line="6" selection-start-column="755320" selection-end-line="6" selection-end-column="755320" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/markdown/github.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="872" selection-start-column="872" selection-end-column="872" />
             </state>
           </provider>
         </entry>
@@ -100,8 +71,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog-docs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="57">
               <caret line="200" selection-start-line="200" selection-end-line="200" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/menu/anime.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/menu/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="114" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/menu/normalize.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -182,6 +183,8 @@
         <option value="$PROJECT_DIR$/js/restApi.js" />
         <option value="$PROJECT_DIR$/blog-docs.html" />
         <option value="$PROJECT_DIR$/js/initCommon.js" />
+        <option value="$PROJECT_DIR$/js/jquery-ui-1.11.0.js" />
+        <option value="$PROJECT_DIR$/js/menu/menu.js" />
         <option value="$PROJECT_DIR$/blog-view.html" />
       </list>
     </option>
@@ -221,24 +224,24 @@
               <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
               <item name="markdown" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ant-blog-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="ant-blog-web" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="ant" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,7 +255,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ant-blog-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/menu" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -267,11 +270,11 @@
       <recent name="D:\java\workspace\git\ant-blog-web\css\about" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\workspace\git\ant-blog-web\css\menu" />
+      <recent name="D:\java\workspace\git\ant-blog-web\js\menu" />
       <recent name="D:\java\workspace\git\ant-blog-web\js\markdown" />
       <recent name="D:\java\workspace\git\ant-blog-web\css\markdown" />
       <recent name="D:\java\workspace\git\ant-blog-web\static\images" />
-      <recent name="D:\java\workspace\git\ant-blog-web\css\view" />
-      <recent name="D:\java\workspace\git\ant-blog-web\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,12 +308,12 @@
       <workItem from="1592357452715" duration="628000" />
       <workItem from="1592623068965" duration="1516000" />
       <workItem from="1592659334228" duration="4572000" />
-      <workItem from="1592708919697" duration="21086000" />
+      <workItem from="1592708919697" duration="23663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51115000" />
+    <option name="totallyTimeSpent" value="53692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3633" y="0" width="1734" height="1407" extended-state="0" />
@@ -326,7 +329,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.2759022" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49650756" visible="true" weight="0.36978757" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49650756" weight="0.36978757" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
@@ -336,9 +339,9 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" sideWeight="0.49940264" weight="0.46677342" />
-      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.5034924" side_tool="true" visible="true" weight="0.36978757" />
+      <window_info anchor="bottom" id="JRebel Console" order="11" sideWeight="0.5005821" side_tool="true" visible="true" weight="0.3296617" />
       <window_info anchor="bottom" id="Message" order="12" />
-      <window_info anchor="bottom" id="Find" order="13" />
+      <window_info anchor="bottom" id="Find" order="13" sideWeight="0.49941793" weight="0.3296617" />
       <window_info anchor="bottom" id="Run" order="14" />
       <window_info anchor="bottom" id="Debug" order="15" weight="0.4819856" />
       <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
@@ -360,19 +363,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/skel.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/home/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/about/js/init.js" />
-    <entry file="file://$PROJECT_DIR$/css/about/style-wide.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/about/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -578,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/markdown/toastui-editor-plugin-code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="755320" selection-start-line="6" selection-start-column="755320" selection-end-line="6" selection-end-column="755320" />
+        <state relative-caret-position="114">
+          <caret line="6" column="755323" selection-start-line="6" selection-start-column="755323" selection-end-line="6" selection-end-column="755323" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -591,14 +581,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/restApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
+        <state relative-caret-position="516">
           <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog-docs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="57">
           <caret line="200" selection-start-line="200" selection-end-line="200" selection-end-column="37" />
         </state>
       </provider>
@@ -612,15 +602,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/initCommon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="186">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-ui-1.11.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="11549" selection-start-line="12" selection-start-column="11549" selection-end-line="12" selection-end-column="11549" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/menu/anime.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/menu/normalize.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/menu/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="114" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog-view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
+        <state relative-caret-position="322">
+          <caret line="278" column="36" selection-start-line="278" selection-start-column="36" selection-end-line="278" selection-end-column="36" />
         </state>
       </provider>
     </entry>
