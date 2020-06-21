@@ -17,7 +17,7 @@ var restUtuls = {
     },
     setQueryString: function (data) {
         var params = "";
-        if (isnotnull(data) && (typeof (data) == "object" && Object.keys(data).length > 0)) {
+        if (!isnull(data) && (typeof (data) == "object" && Object.keys(data).length > 0)) {
             params += "?";
             var num = 0;
             for (var x in data) {

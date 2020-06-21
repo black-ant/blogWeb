@@ -210,11 +210,11 @@
         computed: {},
         methods: {
             forward: function (type) {
-                var search = antUtils.cacheGet('view');
-                if (search == null || type != search.type) {
-                    search.key = 0;
-                }
+                var search = isnull(antUtils.cacheGet('view')) ? {} : antUtils.cacheGet('view');
+
+                search.key = type != search.type ? 0 : search.key;
                 search.type = type;
+
                 antUtils.cacheSet('view', search);
                 window.location.href = "blog-view.html";
             },

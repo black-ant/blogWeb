@@ -7,7 +7,7 @@ var antUtils = {
     },
     cacheGet: function (name) {
         try {
-            if (isnotnull(name)) {
+            if (!isnull(name)) {
                 return JSON.parse(window.localStorage.getItem(name))
             }
         } catch (err) {
@@ -34,9 +34,9 @@ var antUtils = {
     }
 }
 
-function isnotnull(data) {
+function isnull(data) {
     if ("" == data || "undefined" == data || "null" == data || null == data || typeof data == "undefined") {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }

@@ -136,7 +136,7 @@
 
 <script type="module">
 
-    if (!isnotnull(antUtils.cacheGet("view"))) {
+    if (isnull(antUtils.cacheGet("view"))) {
         var cache = {
             type: '1',
             key: '3'
