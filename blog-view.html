@@ -101,7 +101,7 @@
     <div id="app">
         <div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
 
-            <div class="w-full md:w-1/6 md:pr-16 order-3 md:order-1">
+            <div class="w-full md:w-1/6 md:pr-8 order-3 md:order-1">
                 <div class="md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 ">
                     <p class="font-bold my-4 md:my-12">Docs Menus</p>
                     <ul class="flex flex-wrap justify-between flex-col menu-list" v-for="menuItem in menuList" :key="menuItem.id" @click="forward(menuItem.id)">
@@ -114,8 +114,9 @@
             <div class="w-full md:w-5/6 order-1 md:order-2">
                 <div class="max-w-6xl leading-loose tracking-tight">
                     <div id="viewer">
-                        <strong>The example code can be slower than your environment because the code is transpiled by
-                            babel-standalone in runtime.</strong>
+                        <strong>Loading ...</strong>
+                        <br>
+                        <strong>正在加载中 ,请稍后 ...</strong>
                     </div>
                 </div>
             </div>
@@ -128,22 +129,24 @@
 </div>
 
 <script src="js/jquery.min.js"></script>
-<script src='vue/vue.min.js'></script>
-
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/restApi.js"></script>
+
 <script src="js/markdown/toastui-editor-viewer.js"></script>
 <script src="js/markdown/toastui-editor-plugin-code.js"></script>
+
+<script src='vue/vue.min.js'></script>
 <script type="module">
 
-    if (isnull(antUtils.cacheGet("view"))) {
-        var cache = {
-            type: '1',
-            key: '3'
-        }
-        antUtils.cacheSet('view', cache);
-    }
     var search = antUtils.cacheGet("view");
+    if (isnull(search)) {
+        var itemType = restUtuls.getQueryString("type");
+        search = {type: itemType, key: 0}
+        antUtils.cacheSet('view', search);
+    }
+
     const Editor = toastui.Editor;
     const {codeSyntaxHighlight} = Editor.plugin;
     var app = new Vue({
@@ -153,7 +156,7 @@
         },
         computed: {},
         beforeCreate: function () {
-            antInit.init("header_project");
+
         },
         methods: {
             forward: function (key) {

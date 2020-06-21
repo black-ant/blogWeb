@@ -1,8 +1,8 @@
 var antInit = {
     init: function (page) {
-        $(".headerPage").load("component/headerCommon.html");
         antInit.initJs();
         antInit.initCss();
+        $(".headerPage").load("component/headerCommon.html");
         setTimeout(function () {
             var pageNum = page == null ? "header_index" : page;
             $("." + pageNum + " a").addClass("active");
@@ -12,9 +12,7 @@ var antInit = {
 
     },
     initJs: function () {
-        antInit.buildScript("./js/axios.min.js");
-        antInit.buildScript("./js/ant/ant-utils.js");
-        antInit.buildScript("./js/restApi.js");
+
     },
     buildScript: function (url, time) {
         if (null == time) {
@@ -37,3 +35,4 @@ var antInit = {
         document.head.appendChild(localCss);
     }
 }
+

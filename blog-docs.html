@@ -198,6 +198,7 @@
 
 
 <script src="js/jquery.min.js"></script>
+<script src="js/restApi.js"></script>
 <script src='vue/vue.min.js'></script>
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
@@ -216,7 +217,7 @@
                 search.type = type;
 
                 antUtils.cacheSet('view', search);
-                window.location.href = "blog-view.html";
+                window.location.href = "blog-view.html" + restUtuls.setQueryString({type: type});
             },
         },
         watch: {},
