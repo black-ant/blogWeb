@@ -24,7 +24,7 @@ var antUtils = {
         return year + "-" + month + "-" + day;
     },
     mkExchangeArray: function (value) {
-        let code = value.split(/[(\r\n)\r\n]+/); // 根据换行或者回车进行识别
+        let code = value.split(/[\r\n]+/); // 根据换行或者回车进行识别
         code.forEach((item, index) => { // 删除空项
             if (!item) {
                 code.splice(index, 1);

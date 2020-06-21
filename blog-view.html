@@ -7,7 +7,7 @@
     <link type="text/css" rel="stylesheet" href="css/view/tailwind.min.css">
     <!--    <link type="text/css" rel="stylesheet" href="css/view/google.css">-->
     <link rel="stylesheet" href="css/markdown/toastui-editor-viewer.min.css"/>
-
+    <link rel="stylesheet" href="css/markdown/github.min.css"/>
     <style>
         .quicksand {
             font-family: 'Nunito', sans-serif;
@@ -133,7 +133,7 @@
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
 <script src="js/markdown/toastui-editor-viewer.js"></script>
-
+<script src="js/markdown/toastui-editor-plugin-code.js"></script>
 <script type="module">
 
     if (isnull(antUtils.cacheGet("view"))) {
@@ -145,6 +145,7 @@
     }
     var search = antUtils.cacheGet("view");
     const Editor = toastui.Editor;
+    const {codeSyntaxHighlight} = Editor.plugin;
     var app = new Vue({
         el: "#app",
         data: {
@@ -158,16 +159,18 @@
             forward: function (key) {
                 search.key = key;
                 antUtils.cacheSet('view', search);
-                viewGet();
+                app.viewGet();
             },
             viewGet: function () {
                 var $self = this;
                 restApi.getViewList({"type": search['type'], "key": search['key']}, function (data, menu) {
                     var content = antUtils.mkExchangeArray(data.contentBody).join('\n');
+
                     $self.menuList = menu;
                     const viewer = new toastui.Editor({
                         el: document.querySelector('#viewer'),
-                        initialValue: content
+                        initialValue: content,
+                        plugins: [codeSyntaxHighlight]
                     });
 
                     // 刷新菜单
