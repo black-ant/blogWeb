@@ -1,13 +1,52 @@
 var restAddress = {
     rootAddress: "http://127.0.0.1:8086/blog",
     doclist: "/docs/",
+    view: "/view/",
+    viewList: "/views",
+}
+
+var restUtuls = {
+    getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        } else {
+            return null;
+        }
+    },
+    setQueryString: function (data) {
+        var params = "";
+        if (isnotnull(data) && (typeof (data) == "object" && Object.keys(data).length > 0)) {
+            params += "?";
+            var num = 0;
+            for (var x in data) {
+                num++;
+                params += x + "=" + data[x];
+                if (num < Object.keys(data).length) {
+                    params += "&";
+                }
+            }
+        }
+        return params; //返回参数值
+    }
 }
 
 var restApi = {
     getDocList: function (page, fun) {
         antRequest.get(restAddress.doclist + page).then(res => {
-            console.log(res);
             fun(res);
+        })
+    },
+    getView: function (key, fun) {
+        antRequest.get(restAddress.view + key).then(res => {
+            fun(res);
+        })
+    },
+    getViewList: function (param, fun) {
+        const paramStr = restUtuls.setQueryString(param);
+        antRequest.get(restAddress.viewList + paramStr).then(res => {
+            fun(res.data, res.info.menu);
         })
     }
 }
@@ -41,5 +80,5 @@ antRequest.interceptors.request.use(config => {
 // response interceptor（接收拦截器）
 antRequest.interceptors.response.use((response) => {
     const res = response.data;
-    return res.code == "200" ? res.data : res;
+    return res.code == "200" ? res : res;
 }, err)

@@ -86,7 +86,7 @@
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 		background-color: #348cb2;
-		background-image: url("images/bg.jpg");
+		background-image: url("../../static/images/about/bg.jpg");
 		background-position: bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
@@ -120,7 +120,7 @@
 		-ms-animation: overlay 1.5s 1.5s forwards;
 		animation: overlay 1.5s 1.5s forwards;
 		background-attachment: fixed, fixed;
-		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+		background-image: url("../../static/images/about/overlay-pattern.png"), url("../../static/images/about/overlay.svg");
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;

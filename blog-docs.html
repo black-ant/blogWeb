@@ -57,9 +57,7 @@
             </div>
 
         </header>
-
         <section class="pt pb-medium">
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
@@ -93,7 +91,7 @@
                                     <p>SpringBoot 文档合集: </p>
                                     <p class="doc_content_item"> 1 Spring 常用案例 </p>
                                     <p class="doc_content_item"> 2 Spring 源码分析 </p>
-                                    <a href="blog-view.html" class="btn small border readme">查看详情</a>
+                                    <a @click="forward('2')" class="btn small border readme">查看详情</a>
 
                                 </div>
                             </div>
@@ -110,7 +108,7 @@
                                 </div>
                                 <div class="col-sm-8 col-md-8">
 
-                                    <h2>Apero CAS 文集</h2>
+                                    <h2>Linux 文集</h2>
                                     <ul class="entry-meta">
                                         <li class="entry-date">
                                             <a href="#">2020-06-13</a>
@@ -127,11 +125,10 @@
                                             <i class="icon-comment"></i>No Comments
                                         </li>
                                     </ul>
-                                    <p>CAS 文档合集: </p>
-                                    <p class="doc_content_item"> 1 Spring 常用案例 </p>
-                                    <p class="doc_content_item"> 2 Spring 源码分析 </p>
-                                    <a href="blog-view.html" class="btn small border readme">查看详情</a>
-
+                                    <p>Linux 常用操作及命令合集</p>
+                                    <p class="doc_content_item"> 1 Linux 简介 </p>
+                                    <p class="doc_content_item"> 2 Linux 按照Java </p>
+                                    <a @click="forward('1')" class="btn small border readme">查看详情</a>
                                 </div>
                             </div>
 
@@ -208,10 +205,20 @@
 <script type="module">
 
     var app = new Vue({
-        el: "#app",
+        el: "#content",
         data: {},
         computed: {},
-        methods: {},
+        methods: {
+            forward: function (type) {
+                var search = antUtils.cacheGet('view');
+                if (type != search.type) {
+                    search.key = 0;
+                }
+                search.type = type;
+                antUtils.cacheSet('view', search);
+                window.location.href = "blog-view.html";
+            },
+        },
         watch: {},
         mounted() {
             antInit.init("header_docs");
