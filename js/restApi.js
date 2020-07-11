@@ -1,8 +1,10 @@
 var restAddress = {
-    rootAddress: "http://www.antblack.xyz:8086/blog",
+    rootAddress: "http://127.0.0.1:8086/blog",
     doclist: "/docs/",
     view: "/view/",
+    project: "/project",
     viewList: "/views",
+    collectionList: "/collection/",
 }
 
 var restUtuls = {
@@ -40,6 +42,17 @@ var restApi = {
     },
     getView: function (key, fun) {
         antRequest.get(restAddress.view + key).then(res => {
+            fun(res);
+        })
+    },
+    getProject: function (param, fun) {
+        const paramStr = restUtuls.setQueryString(param);
+        antRequest.get(restAddress.project + paramStr).then(res => {
+            fun(res);
+        })
+    },
+    getCollectionList: function (page, fun) {
+        antRequest.get(restAddress.collectionList + page).then(res => {
             fun(res);
         })
     },

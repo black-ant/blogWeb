@@ -61,88 +61,43 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-
-                        <article class="post box light-color mb">
+                        <article class="post box light-color mb" v-for="item in docList">
                             <div class="row">
-
                                 <div class="post-pic col-sm-4 col-md-4 mb-xs">
                                     <a href="blog-post.html"><img src="static/images/logo-footer.png" alt=""
                                                                   class="responsive"/></a>
                                 </div>
                                 <div class="col-sm-8 col-md-8">
 
-                                    <h2>Spring Boot文集</h2>
+                                    <h2>{{item.typeName}}</h2>
                                     <ul class="entry-meta">
                                         <li class="entry-date">
-                                            <a href="#">2020-06-13</a>
+                                            <a href="#">{{item.updateDate}}</a>
                                         </li>
                                         <li class="entry-category">
                                             <a data-original-title="View all posts in Featured" class="tips" href="#"
-                                               title="">文集</a>
+                                               title="">{{item.typeClassify}}</a>
                                         </li>
                                         <li class="entry-author">
                                             <a data-original-title="View all posts by admin" class="tips" href="#"
-                                               title="">Gang</a>
+                                               title="">{{item.updateUser}}</a>
                                         </li>
                                         <li class="entry-comments">
                                             <i class="icon-comment"></i>No Comments
                                         </li>
                                     </ul>
-                                    <p>SpringBoot 文档合集: </p>
-                                    <p class="doc_content_item"> 1 Spring 常用案例 </p>
-                                    <p class="doc_content_item"> 2 Spring 源码分析 </p>
-                                    <a @click="forward('2')" class="btn small border readme">查看详情</a>
-
+                                    <p>{{item.typeDesc}}</p>
+                                    <a @click="forward(item.typeCode)" class="btn small border readme">查看详情</a>
                                 </div>
                             </div>
 
                         </article>
 
-
-                        <article class="post box light-color mb">
-                            <div class="row">
-
-                                <div class="post-pic col-sm-4 col-md-4 mb-xs">
-                                    <a href="blog-post.html"><img src="static/images/logo-footer.png" alt=""
-                                                                  class="responsive"/></a>
-                                </div>
-                                <div class="col-sm-8 col-md-8">
-
-                                    <h2>Linux 文集</h2>
-                                    <ul class="entry-meta">
-                                        <li class="entry-date">
-                                            <a href="#">2020-06-13</a>
-                                        </li>
-                                        <li class="entry-category">
-                                            <a data-original-title="View all posts in Featured" class="tips" href="#"
-                                               title="">文集</a>
-                                        </li>
-                                        <li class="entry-author">
-                                            <a data-original-title="View all posts by admin" class="tips" href="#"
-                                               title="">Gang</a>
-                                        </li>
-                                        <li class="entry-comments">
-                                            <i class="icon-comment"></i>No Comments
-                                        </li>
-                                    </ul>
-                                    <p>Linux 常用操作及命令合集</p>
-                                    <p class="doc_content_item"> 1 Linux 简介 </p>
-                                    <p class="doc_content_item"> 2 Linux 按照Java </p>
-                                    <a @click="forward('1')" class="btn small border readme">查看详情</a>
-                                </div>
+                        <div style="text-align: center;margin:250px auto;">
+                            <div id="pager" class="pager clearfix">
                             </div>
+                        </div>
 
-                        </article>
-
-                        <ul class="pagination">
-                            <li><a href="#">«</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
                     </div>
                     <!-- Sidebar -->
                     <aside class="col-md-4">
@@ -155,37 +110,13 @@
                             <h3>Popular</h3>
                             <nav class="sidebar-menu">
                                 <ul>
-                                    <li><a href="#">SpringBoot源码梳理</a></li>
-                                    <li><a href="#">SpringSecurity源码梳理</a></li>
-                                    <li><a href="#">ApereoCAS技术梳理</a></li>
-                                    <li><a href="#">项目运维快查手册</a></li>
-                                    <li><a href="#">SQL快查手册</a></li>
+                                    <li v-for="item in popularList"><a @click.prevent="forward(item.typeCode)">{{item.typeCode}}</a></li>
                                 </ul>
                             </nav>
                         </section>
-                        <!--              <section class="widget">-->
-                        <!--                <h3>Archives</h3>-->
-                        <!--                <nav class="sidebar-menu">-->
-                        <!--                  <ul>-->
-                        <!--                    <li><a href="#">March 2014</a></li>-->
-                        <!--                    <li><a href="#">September 2011</a></li>-->
-                        <!--                    <li><a href="#">July 2011</a></li>-->
-                        <!--                    <li><a href="#">June 2011</a></li>-->
-                        <!--                  </ul>-->
-                        <!--                </nav>-->
-                        <!--              </section>-->
                         <section class="tag-cloud">
                             <h3>Category</h3>
-                            <a href="#" class="w2">Spring</a>
-                            <a href="#" class="w1">Linux</a>
-                            <a href="#" class="w3">CA</a>
-                            <a href="#" class="w3">SSO</a>
-                            <a href="#" class="w1">面经</a>
-                            <a href="#" class="w2">设计</a>
-                            <a href="#" class="w2">思路</a>
-                            <a href="#" class="w1">前端</a>
-                            <a href="#" class="w3">UI</a>
-                            <a href="#" class="w2">测试</a>
+                            <a @click="forward(item.typeCode)" class="w2" v-for="item in categoryList">{{item.typeCode}}</a>
                         </section>
                     </aside>
                 </div><!-- row -->
@@ -198,32 +129,64 @@
 
 
 <script src="js/jquery.min.js"></script>
-<script src="js/restApi.js"></script>
-<script src='vue/vue.min.js'></script>
+<script src="js/jquery-ui-1.11.0.js"></script>
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
+<script src="js/ant/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/restApi.js"></script>
 
-<script type="module">
+
+<script src='vue/vue.min.js'></script>
+
+<script>
+    function currentPage(currentPage) {
+        console.log("当前页码数：" + currentPage);
+    }
 
     var app = new Vue({
         el: "#content",
-        data: {},
+        data: {
+            docList: {},
+            categoryList: {},
+            popularList: {}
+        },
         computed: {},
         methods: {
             forward: function (type) {
                 var search = isnull(antUtils.cacheGet('view')) ? {} : antUtils.cacheGet('view');
-
                 search.key = type != search.type ? 0 : search.key;
                 search.type = type;
-
                 antUtils.cacheSet('view', search);
                 window.location.href = "blog-view.html" + restUtuls.setQueryString({type: type});
             },
+            get: function () {
+                // Step 1 : Get Doc List
+                var page = antUtils.pageGet("docs");
+                var $self = this;
+                restApi.getCollectionList(page, function (data) {
+                    console.log(data);
+                    const totalData = data.data;
+                    $("#pager").zPager({
+                        totalData: totalData.total,
+                        htmlBox: $('#wraper'),
+                        btnShow: true,
+                        ajaxSetData: false
+                    });
+
+                    $self.docList = totalData.records;
+                    $self.popularList = data.info.tag.popularCollection;
+                    $self.categoryList = data.info.tag.type;
+                });
+
+
+            }
         },
         watch: {},
         mounted() {
             antInit.init("header_docs");
             console.log(antUtils);
+            this.get();
         },
         directives: {},
         components: {},

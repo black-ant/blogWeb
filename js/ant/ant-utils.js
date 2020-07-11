@@ -15,6 +15,15 @@ var antUtils = {
         }
         return {};
     },
+    pageGet: function (name) {
+        var cache = antUtils.cacheGet(name);
+        return null == cache || null == cache.page ? 0 : cache.page;
+    },
+    pageSet: function (name, page) {
+        var search = isnull(antUtils.cacheGet(name)) ? {} : antUtils.cacheGet(name);
+        search.page = null == page ? 0 : page;
+        antUtils.cacheSet(name, search);
+    },
     GetDateBefore: function (AddDayCount) {
         var dd = new Date();
         dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期

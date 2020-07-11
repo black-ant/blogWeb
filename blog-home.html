@@ -80,30 +80,8 @@
                             <li><a href="#" class="fa fa-facebook">128</a></li>
                         </ul>
                     </div>
-                    <a href="#" class="image image-full"><img src="./static/images/portfolio/cabin.png" alt=""/></a>
-                    <p>
-                        <strong>Hello!</strong> You're looking at <a href="http://html5up.net/striped/">Striped</a>, a
-                        fully
-                        responsive HTML5 site template designed by <a href="http://n33.co/">AJ</a>
-                        for <a href="http://html5up.net/">HTML5 UP</a> It features a clean, minimalistic design, styling
-                        for
-                        all
-                        basic page elements (including blockquotes, tables and lists), a
-                        repositionable sidebar (left or right), and HTML5/CSS3 code designed for quick and easy
-                        customization (see
-                        code comments for details).
-                    </p>
-                    <p>
-                        Striped is released for free under the <a href="http://html5up.net/license/">Creative Commons
-                        Attribution
-                        license</a> so feel free to use it for personal projects
-                        or even commercial ones &ndash; just be sure to credit <a href="http://html5up.net/">HTML5
-                        UP</a>
-                        for the
-                        design. If you like what you see here, be sure to check out
-                        <a href="http://html5up.net/">HTML5 UP</a> for more cool designs or follow me on <a
-                            href="http://twitter.com/n33co">Twitter</a> for new releases and updates.
-                    </p>
+                    <!--                    <a href="#" class="image image-full"><img src="./static/images/portfolio/cabin.png" alt=""/></a>-->
+                    <p v-for="item in docItem.desc">{{item}}</p>
                     <hr/>
                 </article>
 
@@ -231,9 +209,14 @@
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
-<script src='vue/vue.min.js'></script>
+<script src="js/jquery-ui-1.11.0.js"></script>
 <script src="js/ant/ant-utils.js"></script>
 <script src="js/initCommon.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/restApi.js"></script>
+
+
+<script src='vue/vue.min.js'></script>
 
 <script src="js/skel.min.js"></script>
 <script src="js/skel-panels.min.js"></script>
@@ -260,19 +243,24 @@
             }
         },
         computed: {},
-        methods: {},
+        methods: {
+            forward: function (type) {
+                var $self = this;
+                restApi.getDocList(0, function (backData) {
+                    console.log(backData);
+                    var contentList = backData.data.records;
+                    for (var item in contentList) {
+                        var desc = antUtils.mkExchangeArray(contentList[item].contentForeword);
+                        contentList[item].desc = desc;
+                    }
+                    $self.docList = contentList;
+                });
+            }
+        },
         watch: {},
         mounted() {
             console.log(antUtils);
-
-            setTimeout(function () {
-                restApi.getDocList(0, function (backData) {
-                    // 数据渲染
-                    this.docList = backData.records;
-                    // 处理分页
-                    this.pages.total
-                });
-            }, 300);
+            this.forward("");
         },
         directives: {},
         components: {},
