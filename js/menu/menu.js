@@ -1,9 +1,8 @@
 var timeOut;
-var colorArray = ["#FF5C5C", "#FFC1C1", "#F0FFFF", "#C6E2FF", "#F4A460", "#FFEC8B", "#C1FFC1", "#FFF0F5", "#AFEEEE"];
-
+var colorArray = ["#CDCD9A", "#A3D1D1", "#C7C7E2", "#D2A2CC", "#D2A2CC", "#E1E100", "#E1E100", "#ACD6FF", "#FFB5B5", "#E0E0E0", "#FFCBB3"];
 
 class Item {
-    constructor(icon, content, backgroundColor) {
+    constructor(icon, content, backgroundColor, location) {
         this.$element = $(document.createElement("div"));
         this.icon = icon;
         this.$element.addClass("item");
@@ -13,6 +12,7 @@ class Item {
         this.$element.append(i);
         if (content != null) {
             var docmenu_item = document.createElement("div");
+            $(docmenu_item).attr("mlocation", location);
             $(docmenu_item).addClass("docmenu_item");
             $(docmenu_item).html(content);
             this.$element.append(docmenu_item);

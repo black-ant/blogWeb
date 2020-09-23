@@ -183,17 +183,17 @@
 
 <div class="mybody bg-white text-gray-700 font-sans quicksand">
     <div class="view-top">
-        <div class="view-back" onclick="javascript:window.location.href='blog-docs.html'">返回</div>
+        <div class="view-back" onclick="javascript :history.back(-1);">返回</div>
     </div>
     <div id="app">
         <div class="p-6 sm:p-10 md:p-16 flex flex-wrap">
 
-            <div class="w-full md:w-1/6 md:pr-8 order-3 md:order-1">
+            <div v-show="showCollection" class="w-full md:w-1/6 md:pr-8 order-3 md:order-1">
                 <div class="md:float-right md:text-right leading-loose tracking-tight md:sticky md:top-0 ">
-                    <p class="font-bold my-4 md:my-12">Docs Menus</p>
-                    <ul class="flex flex-wrap justify-between flex-col menu-list" v-for="menuItem in menuList" :key="menuItem.id" @click="forward(menuItem.id)">
+                    <p class="font-bold my-4 md:my-12">合集列表</p>
+                    <ul class="flex flex-wrap justify-between flex-col menu-list" v-for="menuItem in menuList" :key="menuItem.id" @click.prevent="forward(menuItem.id)">
                         <li>
-                            <div class="nav menu-item">{{menuItem.menuName}}</div>
+                            <div class="nav menu-item" >{{menuItem.menuName}}</div>
                         </li>
                     </ul>
                 </div>
@@ -231,12 +231,19 @@
 <script src='vue/vue.min.js'></script>
 <script type="module">
 
-    var search = antUtils.cacheGet("view");
-    if (isnull(search)) {
-        var itemType = restUtuls.getQueryString("type");
-        search = {type: itemType, key: 0}
-        antUtils.cacheSet('view', search);
+
+    var itemType = restUtuls.getQueryString("type");
+    var itemKey = restUtuls.getQueryString("key");
+    if (antUtils.isnull(itemType) && antUtils.isnull(itemKey)) {
+        var searchCache = antUtils.cacheGet("view");
+        itemType = searchCache.type;
+        itemKey = searchCache.key;
     }
+    if (antUtils.isnull(itemType) && antUtils.isnull(itemKey)) {
+        window.location.href = "blog-home.html"
+    }
+    searchCache = {type: itemType, key: itemKey}
+    antUtils.cacheSet('view', searchCache);
 
     const Editor = toastui.Editor;
     const {codeSyntaxHighlight} = Editor.plugin;
@@ -244,6 +251,8 @@
         el: "#app",
         data: {
             menuList: {},
+            search: {},
+            showCollection: {},
         },
         computed: {},
         beforeCreate: function () {
@@ -251,18 +260,16 @@
         },
         methods: {
             forward: function (key) {
-                search.key = key;
-                antUtils.cacheSet('view', search);
+                searchCache.key = key;
+                antUtils.cacheSet('view', searchCache);
                 $(".doc-menu-container").html("<div id=\"myMenu\"></div>");
                 app.viewGet();
             },
             viewGet: function () {
                 var $self = this;
-                restApi.getViewList({"type": search['type'], "key": search['key']}, function (data, menu) {
+                var key = $self.search['key'] == null ? "0" : $self.search['key'];
+                restApi.getViewList({"type": $self.search['type'], "key": key}, function (data, menu) {
                     var content = antUtils.mkExchangeArray(data.contentBody).join('\n');
-
-                    $self.menuList = menu;
-
                     try {
                         const viewer = new toastui.Editor({
                             el: document.querySelector('#viewer'),
@@ -273,15 +280,19 @@
 
                     }
 
+                    $self.menuList = menu;
+
                     var menuItem = [];
                     var menu = new Menu("#myMenu");
                     var item1 = new Item("list");
                     menu.add(item1);
                     $("#viewer h2,h3").each(function (item) {
-                        var item2 = new Item("link", $(this).html(), colorArray[Math.ceil(Math.random() * 10)]);
+                        var item2 = new Item("link", $(this).html(), colorArray[Math.ceil(Math.random() * 10)], $(this).offset().top - 100);
                         menu.add(item2);
                     });
-
+                    $(".docmenu_item").click(function () {
+                        $(document).scrollTop($(this).attr("mlocation"));
+                    });
                     $(document).delay(50).queue(function (next) {
                         menu.open();
                         next();
@@ -291,7 +302,9 @@
         },
         watch: {},
         mounted() {
-            setTimeout(this.viewGet, 500)
+            this.search = searchCache;
+            this.showCollection = antUtils.isnull(searchCache.type) ? false : true;
+            setTimeout(this.viewGet, 200)
         },
         directives: {},
         components: {},

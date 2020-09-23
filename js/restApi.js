@@ -35,8 +35,8 @@ var restUtuls = {
 }
 
 var restApi = {
-    getDocList: function (page, fun) {
-        antRequest.get(restAddress.doclist + page).then(res => {
+    getDocList: function (type, page, fun) {
+        antRequest.get(restAddress.doclist + type + "/" + page).then(res => {
             fun(res);
         })
     },

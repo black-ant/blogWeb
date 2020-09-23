@@ -40,7 +40,14 @@ var antUtils = {
             }
         })
         return code;
+    },
+    isnull(data) {
+        if ("" == data || "undefined" == data || "null" == data || null == data || typeof data == "undefined") {
+            return true;
+        }
+        return false;
     }
+
 }
 
 function isnull(data) {

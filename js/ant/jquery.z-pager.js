@@ -38,7 +38,7 @@
             }
 		},
 		dataRender: function(_v, _data){
-			
+
 			var opts = _v.data("options");
 			var cells = '';
 				for(var i=0;i<_data.length;i++){
@@ -62,7 +62,7 @@
 		pageRender: function(_v, _current){
 			// 页码操作
 			currentPage(_current);
-			
+
 			/**
 			 * [o this plug propertys]
 			 * @type {Obeject}
@@ -96,7 +96,7 @@
 				_html += methods.forEach(1, _page-(-1), _current, o.active);
 				if(_page>o.minPage){
 					_html += methods.setPrevNext(o, 'next');
-				}	
+				}
 			}
 			_v.html(_html);
 			methods.bindEvent(_v);
@@ -177,7 +177,7 @@
 			var s = '';
 			function prev(){
 				if(_o.btnShow){
-					s += methods.addBtn(_o.firstBtn, 1); 
+					s += methods.addBtn(_o.firstBtn, 1);
 				}
 				if(_o.btnBool){
 					s += methods.addBtn(_o.prevBtn, _o.current-1, _o.pageCount);
@@ -209,7 +209,7 @@
 					type: 'get',
 					data: {"page":_current},
 	                dataType: 'json',
-	                cache : false,  
+	                cache : false,
         			async : false,
 	                success: function(data) {
 	                	if(data.total && (data.total!==0)){
@@ -292,7 +292,7 @@
 		pageCount: 0, //总页数
 		current: 1, //当前页码数
 		pageStep: 8, //当前可见最多页码个数
-		minPage: 5, //最小页码数，页码小于此数值则不显示上下分页按钮
+		minPage: 3, //最小页码数，页码小于此数值则不显示上下分页按钮
 		active: 'current', //当前页码样式
 		prevBtn: 'pg-prev', //上一页按钮
 		nextBtn: 'pg-next', //下一页按钮
