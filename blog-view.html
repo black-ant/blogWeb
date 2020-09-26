@@ -193,7 +193,7 @@
                     <p class="font-bold my-4 md:my-12">合集列表</p>
                     <ul class="flex flex-wrap justify-between flex-col menu-list" v-for="menuItem in menuList" :key="menuItem.id" @click.prevent="forward(menuItem.id)">
                         <li>
-                            <div class="nav menu-item" >{{menuItem.menuName}}</div>
+                            <div class="nav menu-item">{{menuItem.menuName}}</div>
                         </li>
                     </ul>
                 </div>
@@ -304,6 +304,7 @@
         mounted() {
             this.search = searchCache;
             this.showCollection = antUtils.isnull(searchCache.type) ? false : true;
+            // document.title = searchCache['type'] == nul ? searchCache['key'] : searchCache['type'];
             setTimeout(this.viewGet, 200)
         },
         directives: {},

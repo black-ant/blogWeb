@@ -36,13 +36,20 @@
 
     <script src="css/docs/neko-framework/external-plugins/modernizr/modernizr.custom.js"></script>
     <style>
+        .header_container {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
         .readme {
             float: right;
         }
-        .container a{
-            cursor: pointer ;
+
+        .container a {
+            cursor: pointer;
         }
-        .tag-cloud .w2{
+
+        .tag-cloud .w2 {
             margin-left: 1em;
         }
     </style>
@@ -147,8 +154,11 @@
 <script src='vue/vue.min.js'></script>
 
 <script>
+    // 点击后的编号 , 以 1 开始
     function currentPage(currentPage) {
-        console.log("当前页码数：" + currentPage);
+        if (app.currentPage != null && currentPage != app.currentPage) {
+            app.$options.methods.get(currentPage, app);
+        }
     }
 
     var app = new Vue({
@@ -156,7 +166,8 @@
         data: {
             docList: {},
             categoryList: {},
-            popularList: {}
+            popularList: {},
+            currentPage: 1
         },
         computed: {},
         methods: {
@@ -167,14 +178,14 @@
                 antUtils.cacheSet('view', search);
                 window.location.href = "blog-view.html" + restUtuls.setQueryString({type: type});
             },
-            get: function () {
-                // Step 1 : Get Doc List
-                var page = antUtils.pageGet("docs");
-                var $self = this;
+            get: function (page, app) {
+                var $self = app != null ? app : this;
+                $self.currentPage = page;
                 restApi.getCollectionList(page, function (data) {
                     console.log(data);
                     const totalData = data.data;
                     $("#pager").zPager({
+                        current: $self.currentPage,
                         totalData: totalData.total,
                         htmlBox: $('#wraper'),
                         btnShow: true,
@@ -193,7 +204,7 @@
         mounted() {
             antInit.init("header_docs");
             console.log(antUtils);
-            this.get();
+            this.get(this.currentPage);
         },
         directives: {},
         components: {},
