@@ -105,7 +105,7 @@ class Menu {
             anime({
                 targets: current.$element[0],
                 left: head.$element.css("left"),
-                top: parseInt(head.$element.css("top"), 10) + (sens * (iterator * 50)),
+                top: parseInt(head.$element.css("top"), 10) + (sens * (iterator * 40)),
                 duration: 500
             });
             iterator++;

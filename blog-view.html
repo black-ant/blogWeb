@@ -100,18 +100,11 @@
             font-size: 12px
         }
 
-        h2 {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            z-index: -1
-        }
-
         .center {
             position: fixed;
             margin: auto;
-            right: 10em;
-            bottom: 10em;
+            right: 5em;
+            bottom: 5em;
         }
 
         .menu {
@@ -129,15 +122,15 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-color: #fff;
             -moz-border-radius: 50%;
             -webkit-border-radius: 50%;
             border-radius: 50%;
             cursor: pointer;
             text-align: center;
-            line-height: 40px
+            line-height: 30px;
         }
 
         i {
@@ -156,7 +149,7 @@
             left: -14em;
             top: 0;
             width: 13em;
-            height: 40px;
+            height: 30px;
             border-radius: 20px 10px 10px 20px;
             background-color: inherit;
             overflow: hidden;
@@ -166,9 +159,33 @@
             cursor: pointer;
             font-weight: 900;
             text-align: center;
-            line-height: 40px;
+            line-height: 30px;
             font-family: open sans, sans-serif;
-            font-size: 12px;
+            font-size: 11px;
+        }
+
+        #top_menu {
+            /*margin-left: 10%;*/
+            border: 1px solid #ebc9c9;
+            padding: 14px;
+        }
+
+        #top_menu div {
+            cursor: pointer;
+        }
+
+        #top_menu div:hover {
+            text-decoration: underline;
+        }
+
+
+        .h2title {
+            font-size: 1.5em;
+        }
+
+        .h3title {
+            font-size: 1.2em;
+            margin-left: 5%;
         }
 
 
@@ -200,6 +217,10 @@
             </div>
             <div class="w-full md:w-5/6 order-1 md:order-2">
                 <div class="max-w-6xl leading-loose tracking-tight">
+                    <div id="top_menu">
+                        <div v-for="menuItem in topMenu" :class="menuItem.className" @click.prevent="slide(menuItem.length)">{{menuItem.name}}</div>
+                    </div>
+
                     <div id="viewer">
                         <strong>Loading ...</strong>
                         <br>
@@ -253,6 +274,7 @@
             menuList: {},
             search: {},
             showCollection: {},
+            topMenu: []
         },
         computed: {},
         beforeCreate: function () {
@@ -264,6 +286,10 @@
                 antUtils.cacheSet('view', searchCache);
                 $(".doc-menu-container").html("<div id=\"myMenu\"></div>");
                 app.viewGet();
+            },
+            slide: function (length) {
+                // $(document).animate({'scrollTop': '0px'}, length);
+                $(document).scrollTop(length);
             },
             viewGet: function () {
                 var $self = this;
@@ -286,13 +312,26 @@
                     var menu = new Menu("#myMenu");
                     var item1 = new Item("list");
                     menu.add(item1);
+
+                    var topMenu = [];
                     $("#viewer h2,h3").each(function (item) {
-                        var item2 = new Item("link", $(this).html(), colorArray[Math.ceil(Math.random() * 10)], $(this).offset().top - 100);
-                        menu.add(item2);
+                        var title = $(this).html();
+                        var where = $(this).offset().top;
+                        var className = "h3title";
+                        if (this.tagName == "H2") {
+                            var item2 = new Item("link", title, colorArray[Math.ceil(Math.random() * 10)], where);
+                            menu.add(item2);
+                            className = "h2title";
+                        }
+
+                        topMenu.push({"name": title, "length": where, "className": className});
                     });
+                    $self.topMenu = topMenu;
+
                     $(".docmenu_item").click(function () {
                         $(document).scrollTop($(this).attr("mlocation"));
                     });
+
                     $(document).delay(50).queue(function (next) {
                         menu.open();
                         next();
@@ -305,7 +344,9 @@
             this.search = searchCache;
             this.showCollection = antUtils.isnull(searchCache.type) ? false : true;
             // document.title = searchCache['type'] == nul ? searchCache['key'] : searchCache['type'];
-            setTimeout(this.viewGet, 200)
+            setTimeout(this.viewGet, 200);
+
+
         },
         directives: {},
         components: {},
