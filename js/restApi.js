@@ -1,7 +1,7 @@
 // http://www.antblack.xyz
 var restAddress = {
-    rootAddress: "http://www.antblack.xyz:8086/blog",
-    // rootAddress: "http://127.0.0.1:8086/blog",
+    // rootAddress: "http://www.antblack.xyz:8086/blog",
+    rootAddress: "http://127.0.0.1:8086/blog",
     doclist: "/docs/",
     view: "/view/",
     project: "/project",
