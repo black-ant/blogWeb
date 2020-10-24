@@ -69,11 +69,11 @@
                         </h1>
                     </div>
                     <div class="col-md-6">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li class="active">Data</li>
-                        </ol>
+                        <!--                        <ol class="breadcrumb">-->
+                        <!--                            <li><a href="#">Home</a></li>-->
+                        <!--                            <li><a href="#">Library</a></li>-->
+                        <!--                            <li class="active">Data</li>-->
+                        <!--                        </ol>-->
                     </div>
                 </div>
             </div>
@@ -87,7 +87,8 @@
                     <aside id="sidebar" class="col-md-3">
                         <nav class="sidebar-menu mb-xs">
                             <ul class="project-menu">
-                                <li v-for="item in proList"><a :class="setClass(item.projectCode)" @click.prevent="forward(item.projectCode)">{{item.projectName}}</a>
+                                <li v-for="item in proList"><a :class="setClass(item.projectCode)"
+                                                               @click.prevent="forward(item.projectCode)">{{item.projectName}}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -100,7 +101,8 @@
                                 <h2>{{project.projectName}}</h2>
                                 <h3>项目作者 : {{project.projectUser}}</h3>
                                 <h3>项目标签 : {{project.projectTag}}</h3>
-                                <h3>项目地址 : <a :href="setPath(project.projectPath)" target="blank">{{project.projectPath}}</a></h3>
+                                <h3>项目地址 : <a :href="setPath(project.projectPath)" target="blank">{{project.projectPath}}</a>
+                                </h3>
                             </div>
                             <div class="col-md-3">
                                 <img src="static/images/logo-footer.png" alt="" class="responsive"/></a>

@@ -24,6 +24,7 @@
             margin-right: 0;
             width: 100%;
         }
+
         hr {
             border: 1px dashed #d2d1d1;
             padding: 0;
@@ -54,6 +55,13 @@
             background-color: #364050;
         }
 
+        #content-inner .tui-editor-contents h2 {
+            margin: 0.5em 0;
+        }
+
+        #content-inner .tui-editor-contents h3 {
+            margin: 0.2em 0;
+        }
     </style>
 
 </head>
@@ -78,7 +86,7 @@
 
                 <article class="is-post is-post-excerpt" v-for="docItem in docList" :key="docItem.id">
                     <header>
-                        <h2><a :href="'blog-view.html?key='+docItem.id">{{docItem.contentTitle}}</a></h2>
+                        <h2 class="must"><a :href="'blog-view.html?key='+docItem.id">{{docItem.contentTitle}}</a></h2>
                         <span class="byline">{{docItem.contentInfo}}</span>
                     </header>
                     <div class="info">
@@ -91,7 +99,8 @@
                         </ul>
                     </div>
                     <!--                    <a href="#" class="image image-full"><img src="./static/images/portfolio/cabin.png" alt=""/></a>-->
-                    <p v-for="item in docItem.desc">{{item}}</p>
+                    <div :id="forId(docItem.id)"></div>
+                    <!--                    <p v-for="item in docItem.desc">{{item}}</p>-->
                     <hr/>
                 </article>
 
@@ -106,9 +115,12 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li v-bind:class="{ current_page_item:'new'==typeClass}" v-on:click="selectType('new')"><a href="#">最新文档</a></li>
-                    <li v-bind:class="{ current_page_item:'hot'==typeClass}" v-on:click="selectType('hot')"><a href="#">最热文档</a></li>
-                    <li v-bind:class="{ current_page_item:'start'==typeClass}" v-on:click="selectType('start')"><a href="#">点赞最多</a></li>
+                    <li v-bind:class="{ current_page_item:'new'==typeClass}" v-on:click="selectType('new')"><a href="#">最新文档</a>
+                    </li>
+                    <li v-bind:class="{ current_page_item:'hot'==typeClass}" v-on:click="selectType('hot')"><a href="#">最热文档</a>
+                    </li>
+                    <li v-bind:class="{ current_page_item:'start'==typeClass}" v-on:click="selectType('start')"><a
+                            href="#">点赞最多</a></li>
                 </ul>
             </nav>
 
@@ -125,7 +137,8 @@
                     <h2>闲文</h2>
                 </header>
                 <ul>
-                    <li v-for="item in orderList" v-on:click="selectType('new')"><a :href="'blog-view.html?key='+item.id">{{item.contentTitle}}</a></li>
+                    <li v-for="item in orderList" v-on:click="selectType('new')"><a
+                            :href="'blog-view.html?key='+item.id">{{item.contentTitle}}</a></li>
                 </ul>
             </section>
 
@@ -135,7 +148,8 @@
                     <h2>系列合集</h2>
                 </header>
                 <ul>
-                    <li v-for="item in popularList" v-on:click="selectType('new')"><a :href="'blog-view.html?type='+item.typeCode">{{item.typeName}}</a></li>
+                    <li v-for="item in popularList" v-on:click="selectType('new')"><a
+                            :href="'blog-view.html?type='+item.typeCode">{{item.typeName}}</a></li>
                     <li><a href="blog-docs.html"> 查看更多...</a></li>
                 </ul>
             </section>
@@ -216,6 +230,9 @@
     <script src="js/restApi.js"></script>
     <script src="js/ant/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
 
+    <script src="js/markdown/toastui-editor-viewer.js"></script>
+    <script src="js/markdown/toastui-editor-plugin-code.js"></script>
+
     <script src='vue/vue.min.js'></script>
 
     <script src="js/skel.min.js"></script>
@@ -231,9 +248,9 @@
     </script>
 
     <script>
-
-
         antInit.init("header_home");
+        const Editor = toastui.Editor;
+        const {codeSyntaxHighlight} = Editor.plugin;
         var default_doc = [{
             id: "0",
             contentTitle: "文章还在处理中",
@@ -251,6 +268,9 @@
             },
             computed: {},
             methods: {
+                forId: function (index) {
+                    return "view" + index
+                },
                 forward: function (type, page, app) {
                     // 通过 外部JS 调用的 this 不是 Vue 对象
                     var $self = app != null ? app : this;
@@ -259,10 +279,6 @@
                     restApi.getDocList(type, page, function (backData) {
                         console.log(backData);
                         var contentList = backData.data.records;
-                        for (var item in contentList) {
-                            var desc = antUtils.mkExchangeArray(contentList[item].contentForeword);
-                            contentList[item].desc = desc;
-                        }
 
                         // 动态设置数据 , 避免死循环
                         // var ajaxSerData = page > 1 ? true : false;
@@ -277,6 +293,26 @@
                         });
                         $self.docList = contentList;
                     });
+                },
+                showContent() {
+                    var contentList = this.docList;
+                    for (var item in contentList) {
+                        try {
+                            const obj = contentList[item];
+                            var desc = antUtils.mkExchangeArray(obj['contentForeword']);
+                            desc.shift();
+                            desc.shift();
+                            desc = desc.join('\n');
+                            new toastui.Editor({
+                                el: document.querySelector('#view' + obj['id']),
+                                initialValue: desc,
+                                plugins: [codeSyntaxHighlight]
+                            });
+                        } catch (e) {
+                            console.log(e);
+                        }
+                    }
+                    $("#content h2:not(.must)").css("font-size", "1.5em")
                 },
                 getCollection: function () {
                     var $self = this;
@@ -295,7 +331,7 @@
                 },
                 selectType: function (type) {
                     this.typeClass = type;
-                    this.forward(type,this.currentPage);
+                    this.forward(type, this.currentPage);
                 },
                 selectDoc: function (type) {
                     this.typeClass = type;
@@ -308,6 +344,10 @@
                 this.forward("new", 1);
                 this.getCollection();
                 this.getOrderDoc();
+
+            },
+            updated() {
+                this.showContent();
             },
             directives: {},
             components: {},
